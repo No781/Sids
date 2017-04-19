@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+    <title>App</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Playfair+Display+SC">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="css/javascript.fullPage.css">
+    <link rel="stylesheet" href="css/app.css">
+    <script>
+      $(document).ready(function() {
+          $('#fullpage').fullpage({
+              'verticalCentered': true,
+              'css3': true,
+              'navigation': true,
+              'navigationPosition': 'right',
+              'navigationTooltips': ['Landing', 'The Story', 'News', 'About'],
+      
+              'onLeave': function(index, nextIndex, direction){
+                  if (index == 3 && direction == 'down'){
+                      $('.section').eq(index -1).removeClass('moveDown').addClass('moveUp');
+                  }
+                  else if(index == 3 && direction == 'up'){
+                      $('.section').eq(index -1).removeClass('moveUp').addClass('moveDown');
+                  }
+      
+                  $('#staticImg').toggleClass('active', (index == 2 && direction == 'down' ) || (index == 4 && direction == 'up'));
+                  $('#staticImg').toggleClass('moveDown', nextIndex == 4);
+                  $('#staticImg').toggleClass('moveUp', index == 4 && direction == 'up');
+              }
+          });
+      });
+    </script>
+    <body>
+      <div id="fullpage">
+        <section id="Landing" class="section">
+          <div style="background-image: url(images/bg1.jpg);" class="border">
+            <div class="content">
+              <h1>Siddhant's Film</h1>
+              <p>A truly moving picture</p>
+              <p style="font-size: 1rem">Plus the trailer, awards and sponsors will be shown here</p>
+            </div>
+          </div>
+        </section>
+        <section id="intro" class="section noborder">
+          <div id="slide1" class="slide">
+            <div class="content">
+              <div class="double">
+                <div style="background-image: url(images/bg2.jpg);" class="left"></div>
+                <div class="right">
+                  <div class="padding">
+                    <h4>THE</h4>
+                    <h1>FAITHFUL FOOLISH</h1>
+                    <p>Wisdom cannot be imparted. Wisdom that a wise man attempts to impart always sound like foolishness to someone else ... Knowledge can be communicated, but not wisdom. One can find it. <br/><br/> Short Synopsis comes here. Just a brief summary</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="slide-text" class="slide">
+            <div class="content">
+              <div class="padding">
+                <div class="col">
+                  <h2>The Story</h2>
+                  <p><span>Sed vitae ex eget risus consectetur condimentum non finibus lacus. Nam varius pretium neque, vel mollis leo dapibus sit amet.</span></p>
+                  <p>Maecenas malesuada, nisl ut malesuada eleifend, nulla orci lacinia nulla, luctus commodo augue risus id neque. Ut nec auctor urna. Praesent id mi quis elit convallis fermentum. Integer eros nunc, sagittis finibus finibus sit amet, maximus a nunc. Suspendisse purus diam, convallis sed enim vitae, hendrerit maximus ex. Aenean ut nisi hendrerit, pretium velit id, posuere justo. Nulla sed lectus est.</p>
+                  <p>Nunc et ultrices eros, vitae dapibus augue. Duis tristique ipsum non odio gravida, vitae ornare purus blandit. Pellentesque sodales nisl et lorem ullamcorper aliquet. Morbi aliquam, magna ac dictum dictum, turpis velit malesuada dui, a pellentesque risus erat in urna. Proin congue tincidunt consectetur. Sed et fermentum urna. Donec nec orci at ante mollis luctus id sed turpis.</p>
+                  <p>In hac habitasse platea dictumst. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vivamus a laoreet massa, sed tempor felis. Vivamus eu dapibus tortor. Nunc et metus dictum, vestibulum felis eget, efficitur neque. Sed in finibus sapien, nec commodo eros. Quisque est ligula, bibendum ac sagittis lacinia, pretium nec nisl. Integer sit amet fermentum lectus.</p>
+                  <p>Sed vitae ex eget risus consectetur condimentum non finibus lacus. Nam varius pretium neque, vel mollis leo dapibus sit amet. Mauris velit felis, hendrerit egestas efficitur non, euismod sit amet urna. In ut nisl ipsum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Cras enim felis, tincidunt ac mi et, accumsan pellentesque justo. Mauris dignissim ipsum nec sapien efficitur pulvinar. Phasellus dictum augue ex, vel pellentesque mauris varius eget. Nam venenatis justo nec nisl porta molestie. Curabitur quis nibh semper, facilisis risus ut, rhoncus nisi.</p>
+                  <p>Aenean posuere ante in libero fermentum imperdiet. Nam sed magna condimentum, convallis lorem porta, tincidunt neque. Integer accumsan vel mauris quis condimentum. Vivamus non tristique nisl, vel rutrum metus. Fusce fringilla, eros eu laoreet consequat, odio nisi convallis augue, ac condimentum ligula arcu eu nibh. Aenean pretium interdum augue, vitae cursus neque interdum non. Praesent sodales volutpat convallis. Vestibulum pharetra justo sit amet vulputate imperdiet. Aenean in massa et libero tempus iaculis cursus at risus. Proin pulvinar scelerisque nunc sed lacinia. Donec mattis gravida placerat. Quisque ac lorem facilisis, rutrum mauris et, maximus orci. </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="slide2" class="slide">
+            <div class="content">
+              <div class="padding">
+                <div class="double">
+                  <div style="background-image: url(images/face1.gif);" class="left"></div>
+                  <div class="right">
+                    <h2>The Good</h2>
+                    <p>LoremLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit.</p>
+                    <p>LoremLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit. </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="slide3" class="slide">
+            <div class="content">
+              <div class="padding">
+                <div class="double">
+                  <div style="background-image: url(images/face2.gif);" class="left"></div>
+                  <div class="right">
+                    <h2>The Bad</h2>
+                    <p>LoremLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit.</p>
+                    <p>LoremLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="slide4" class="slide">
+            <div class="content">
+              <div class="padding">
+                <div class="double">
+                  <div style="background-image: url(images/face3.gif);" class="left"></div>
+                  <div class="right">
+                    <h2>Yep, seen that</h2>
+                    <p>LoremLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit.</p>
+                    <p>LoremLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit. </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id="section2" class="section">
+          <div class="border">
+            <div class="content">
+              <div class="title">
+                <h1>The News</h1>
+                <p>Will be shown here</p>
+              </div>
+              <article>
+                <h2><a href="#">A text post</a></h2>
+                <div class="date">Published 16 Dec 2017</div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat excepturi dolores ea, asperiores cupiditate consequuntur dolorem molestiae ad sequi praesentium quam officia nam! Neque soluta provident minima impedit fugit numquam?</p><a href="#" class="read">Read More</a>
+              </article>
+              <article style="background-image: url(images/bg1.jpg); background-size: cover;">
+                <div class="inside">
+                  <h2><a href="#">A gallery post</a></h2>
+                  <div class="date">Published 16 Dec 2017</div>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat excepturi dolores ea, asperiores cupiditate consequuntur dolorem molestiae ad sequi praesentium quam officia nam! Neque soluta provident minima impedit fugit numquam?</p><a href="#" class="read">Read More</a>
+                </div>
+              </article>
+              <article>
+                <h2><a href="#">A hybrid post</a></h2>
+                <div class="date">Published 16 Dec 2017</div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat excepturi dolores ea, asperiores cupiditate consequuntur dolorem molestiae ad sequi praesentium quam officia nam! Neque soluta provident minima impedit fugit numquam?</p><a href="#" class="read">Read More</a>
+              </article>
+            </div>
+            <div class="archive">
+              <h2> <a href="#">View Archive</a></h2>
+            </div>
+          </div>
+        </section>
+        <section id="section1" class="section">
+          <div style="background-image: url(images/sid.jpg);" class="border">
+            <div class="content">
+              <h1>Siddhant Sarin</h1>
+              <p>Something about yourself</p>
+            </div>
+          </div>
+        </section>
+      </div>
+      <script src="js/app.js"></script>
+      <script src="js/javascript.fullPage.js"></script>
+      <script>
+        fullpage.initialize('#fullpage', {
+            anchors: ['firstPage', 'secondPage', '3rdPage', '4thpage', 'lastPage'],
+            menu: '#menu',
+            navigation: true,
+            navigationPosition: 'right',
+            navigationTooltips: ['fullPage.js', 'Powerful', 'Amazing', 'Simple'],
+            css3:true
+        });
+      </script>
+    </body>
+  </head>
+</html>
